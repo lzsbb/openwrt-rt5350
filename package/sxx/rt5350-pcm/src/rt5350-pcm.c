@@ -281,7 +281,7 @@ static int rt5350_pcm_dai_probe(struct snd_soc_dai *dai)
     cfg |= PCM_PCM_CFG_FSYNC_POL; // sync high active
     
     //slot mode, pcm clock = 256KHz
-    cfg &= ~(0x07);
+    cfg &= ~(0x08);
     cfg = 0; // 4 slots
    
 	rt5350_pcm_write(pcm, PCM_PCM_CFG, cfg);
